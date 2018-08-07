@@ -1,26 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {SharedComponent} from './shared/shared.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OptionsComponent } from './options/options.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { TableComponent } from './table/table.component';
+import { HomePage } from '../app/pages/home/home_page';
+
+import { MatToolbarModule,
+         MatButtonModule, 
+        MatSidenavModule, 
+        MatIconModule, 
+        MatListModule, 
+        MatGridListModule, 
+        MatCardModule, 
+        MatMenuModule, 
+        MatTableModule, 
+        MatPaginatorModule, 
+        MatSortModule } from '@angular/material';
+import { DrumsComponent } from './pages/drums/drums.component';
+import { CymbalsComponent } from './pages/cymbals/cymbals.component';
+import { DrumsticksComponent } from './pages/drumsticks/drumsticks.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OptionsComponent,
-    DashboardComponent,
-    TableComponent
+    HomePage,
+    DrumsComponent,
+    CymbalsComponent,
+    DrumsticksComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedComponent,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -33,7 +46,8 @@ import { TableComponent } from './table/table.component';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
