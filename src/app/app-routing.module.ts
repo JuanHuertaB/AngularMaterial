@@ -7,10 +7,6 @@ import { CymbalsComponent } from './pages/cymbals/cymbals.component';
 
 
 export const routes: Routes = [
-  { 
-    path: '',
-    component: HomePage
-  },
   {
     path: 'drums',
     component: DrumsComponent
